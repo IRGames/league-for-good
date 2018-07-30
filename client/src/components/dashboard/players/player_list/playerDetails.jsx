@@ -13,6 +13,13 @@ const Player = ({ player, history }) => {
 		return (
 			<h2>...Loading</h2>
 		);
+	} else if (!player.teams[0]) {
+		player.teams[0] = {
+			position: [],
+			seasonId: '',
+			teamId: 'No team assigned',
+			_id: player.id
+		};
 	}
 
 	return (
